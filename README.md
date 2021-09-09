@@ -17,9 +17,12 @@ public abstract class Account {
 
     protected abstract void withdraw(double amount);
 }
+```
+![This is an image](https://www.baeldung.com/wp-content/uploads/2020/07/2.png)
 
-// Here, we introduced a new abstract Account class that CurrentAccount and SavingsAccount extend.
+ Here, we introduced a new abstract Account class that CurrentAccount and SavingsAccount extend.
 
+```java
 public abstract class Account {
    public abstract void deposit(double amount);
 }
@@ -116,6 +119,7 @@ public interface ParkingLot {
 We modeled a very simplified parking lot. It is the type of parking lot where you pay an hourly fee. Now consider that we want to implement a parking lot that is free.
 But it is too specific. Because of that, our FreeParking class was forced to implement payment-related methods that are irrelevant. Let's separate or segregate the interfaces.
 
+![This is an image](https://erinc.io/wp-content/uploads/2020/08/SOLID-Tutorial-1024x432.png)
 
 We've now separated the parking lot. With this new model, we can even go further and split the PaidParkingLot to support different types of payment.
 
