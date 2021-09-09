@@ -1,5 +1,7 @@
 # OOPs_Solid_Principles
 
+![Solid Design ](https://img.shields.io/badge/Solid_Design-Principles--in--Java-green.svg?longCache=true&style=for-the-badge)
+
  
 ## Open-Closed Principle (OCP)
 The Open-Closed Principle requires that classes should be open for extension and closed to modification.
