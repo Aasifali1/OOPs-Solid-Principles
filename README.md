@@ -102,6 +102,7 @@ class SavingAccount extends Account{
 
 Segregation means keeping things separated, and the Interface Segregation Principle is about separating the interfaces.
 
+```java 
 public interface ParkingLot {
 
 	void parkCar();	// Decrease empty spot count by 1
