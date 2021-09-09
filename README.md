@@ -28,7 +28,8 @@ public abstract class Account {
 Consequently, the BankingAppWithdrawalService is open for the extension with new account types, but closed for modification, in that the new types don't require it to change in order to integrate.
 
 
-```public class AppWithdrawService {
+```java
+public class AppWithdrawService {
    private WithdrawableAcc withdrawableAccount;
 
    public AppWithdrawService(WithdrawableAcc withdrawableAccount) {
@@ -47,7 +48,8 @@ The Liskov Substitution Principle states that subclasses should be substitutable
 
 This means that, given that class B is a subclass of class A, we should be able to pass an object of class B to any method that expects an object of class A and the method should not give any weird output in that case.
 
-```class TestLSP{
+```java
+class TestLSP{
    public static void test(Account account , double amount)
    {
        account.deposit(amount);
@@ -69,7 +71,8 @@ In the above example there is two objects of SavingAccount class and CurrentAcco
 
 given that class SavingAccount is a subclass of class Account, we are passing the objects of class SavingAccount and CurrentAccount to the test method given in above code method that expects an object of class Account and the method  gives the desired output.
 
-```class CurrentAccount extends Account{
+```java
+class CurrentAccount extends Account{
   @Override
    public void deposit(double amount) {
   
@@ -115,7 +118,8 @@ But it is too specific. Because of that, our FreeParking class was forced to imp
 
 We've now separated the parking lot. With this new model, we can even go further and split the PaidParkingLot to support different types of payment.
 
-```public interface ParkingLot {
+```java
+public interface ParkingLot {
    void parkCar();    // Decrease empty spot count by 1
    void unparkCar(); // Increase empty spots by 1
    void getCapacity();    // Returns car capacity
